@@ -30,6 +30,8 @@ else:
 temp=293
 P=760
 
+home=os.environ['PWD']
+
 #Folder where the Ansys field maps are stored
 folder='THGEM_pitch1.0mm_thickness'+thickness+'mm_holediameter'+holediameter+'mm_rim'+rimsize+'mm_slices'+str(numberOfSlices)+'_ed0.5_ei0.5kVcm-1'
 
@@ -69,6 +71,7 @@ if step:
   '+ScriptFolder+'/'+script+' '+str(numberOfSlices)+' '+str(npe)+' '+str(VTHGEM)+' '+gas+' '+str(iterStart)+' '+str(iterations)+' '+str(P)+' '+str(temp)+' '+str(step)+' '+fieldMapDirNEW+'\n\
   \n\
   echo finished at `date`\n\
+  cd '+home+'\n\
   \n')
   file.close()
   print 'execute',simulationDir+'/charging_up_submission.sh'
@@ -87,6 +90,7 @@ else:
     '+ScriptFolder+'/'+script+' '+str(numberOfSlices)+' '+str(npe)+' '+str(VTHGEM)+' '+gas+' '+str(i)+' '+str(i+1)+' '+str(P)+' '+str(temp)+' '+str(step)+' '+fieldMapDirNEW+'\n\
     \n\
     echo finished at `date`\n\
+    cd '+home+'\n\
     \n')
     file.close()
     print 'execute',simulationDir+'/charging_up_submission_iter'+str(i)+'.sh'
