@@ -48,7 +48,7 @@ or
 
 `tar -zxvf ../Ansys/THGEM_pitch1.0mm_thickness0.4mm_holediameter0.5mm_rim0.70mm_slices22_ed0.5_ei0.5kVcm-1.tar.gz`
 
-:exclamation::exclamation::exclamation: Once the simulation will be launched, the files will be modified, don't run several simulations on the same folder, duplicate the folders 
+:exclamation::exclamation::exclamation: Once the simulation will be launched, the files will be modified, don't run several simulations on the same folder, duplicate the folders :exclamation::exclamation::exclamation:
 
 ### Run with bsub
 ...
